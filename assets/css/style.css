@@ -12,7 +12,7 @@ body {
 	width: auto;
 	height: 100%;
 	display: grid;
-	border: 0px solid black;
+	/*border: 0px solid black;*/
 	grid-template-rows: auto;
 	grid-template-columns: auto;
 	grid-template-areas: "header"
@@ -23,8 +23,7 @@ body {
 
 .header {
 	grid-area: header;
-	background-color: #0B56A4;
-	color: white;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -37,7 +36,6 @@ body {
 
 .nav {
 	grid-area: nav;
-	background-color: #0A2F57;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -51,23 +49,27 @@ body {
 }
 .nav a {
 	text-decoration: none;
-	color: white;
+	/*color: white;*/
 }
 
 .main {
 	grid-area: main;
 	display: grid;
+	opacity: 90%
 	grid-template-rows: 1fr 1fr;
 	grid-template-columns: 1fr;
 	grid-template-areas: "article1"
-	 					 "aside"
+	 					 "aside";
+	/*text-align: justify;*/
 } /* i put grid inside of grid,  */
 
 	.article1 {
 		grid-area: article1;
-		background-color: yellow;
 		display: inline-block;
 		padding: 10px;
+		text-align: justify;
+		word-spacing: 2px;
+		letter-spacing: 1px;
 	}
 
 	.aside {
@@ -81,12 +83,11 @@ body {
 	}
 	.aside a {
 		text-decoration: none;
+		/*color: black;*/
 	}
 
 .footer {
 	grid-area: footer;
-	background-color: #0B56A4;
-	color: white;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -97,12 +98,19 @@ body {
 	color: white;
 }
 
+.articleimages {
+	width: 30%;
+	float: left;
+	margin: 5px 10px 5px 2px;
+}
+
+
 @media (min-width: 680px) {
 	.thebody {
 			width: 90%;
 			display: grid;
 			grid-template-columns: 1fr 1.5fr;
-			grid-template-rows: 1fr 0.3fr 1fr 1.4fr 0.3fr;
+			grid-template-rows: 0.5fr 0.1fr 1fr 1fr 0.2fr;
 			grid-template-areas: "header header"
 								"nav nav"
 								"main main"
