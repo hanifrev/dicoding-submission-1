@@ -1,0 +1,128 @@
+@import url('');
+
+body {
+	font-family: ;
+	background-image:  url(../img/backnew.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	font-family: "Cabin", Arial, Geneva, sans-serif;
+}
+
+.thebody {
+	width: auto;
+	height: 100%;
+	display: grid;
+	border: 0px solid black;
+	grid-template-rows: auto;
+	grid-template-columns: auto;
+	grid-template-areas: "header"
+						 "nav"
+						 "main"				
+						 "footer"; 
+}
+
+.header {
+	grid-area: header;
+	background-color: #0B56A4;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*grid-auto-rows: 1fr 1fr;
+	grid-auto-columns: 1fr;
+	grid-template-areas: "header"
+						 "nav";*/
+}
+
+
+.nav {
+	grid-area: nav;
+	background-color: #0A2F57;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	/*padding: 0px 20px 0px 20px;*/
+}
+.nav ul > li {	
+	list-style: none;
+	display:inline-block;
+	padding: 0px 20px 0 20px;
+
+}
+.nav a {
+	text-decoration: none;
+	color: white;
+}
+
+.main {
+	grid-area: main;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr;
+	grid-template-areas: "article1"
+	 					 "aside"
+} /* i put grid inside of grid,  */
+
+	.article1 {
+		grid-area: article1;
+		background-color: yellow;
+		display: inline-block;
+		padding: 10px;
+	}
+
+	.aside {
+		grid-area: aside;
+		background-color: limegreen;
+		/*display: flex;*/
+		/*flex-direction: column;*/
+		display: block;
+		padding: 10px;
+		
+	}
+	.aside a {
+		text-decoration: none;
+	}
+
+.footer {
+	grid-area: footer;
+	background-color: #0B56A4;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.footer a {
+	text-decoration: none;
+	color: white;
+}
+
+@media (min-width: 680px) {
+	.thebody {
+			width: 90%;
+			display: grid;
+			grid-template-columns: 1fr 1.5fr;
+			grid-template-rows: 1fr 0.3fr 1fr 1.4fr 0.3fr;
+			grid-template-areas: "header header"
+								"nav nav"
+								"main main"
+								"main main"
+								"footer footer"; 
+			padding: 4px;
+			margin: 2px auto;
+	}
+	.main {
+		grid-template-rows: 1fr;
+		grid-template-columns: 2fr 0.8fr;
+		grid-template-areas: "article1 aside"
+	}
+	.nav {
+		
+
+	}
+	.nav ul > li {	
+	/*list-style: none;*/
+	display:inline-block;
+	padding: 0px 40px 0 40px;
+	}
+}
