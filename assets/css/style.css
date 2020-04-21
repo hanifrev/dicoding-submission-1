@@ -6,9 +6,11 @@ body {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	font-family: "Cabin", Arial, Geneva, sans-serif;
+
 }
 
 .thebody {
+
 	width: auto;
 	height: 100%;
 	display: grid;
@@ -22,8 +24,8 @@ body {
 }
 
 .header {
+	border-radius: 15px 15px 0px 0px;
 	grid-area: header;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -87,6 +89,7 @@ body {
 	}
 
 .footer {
+	border-radius: 0px 0px 15px 15px;
 	grid-area: footer;
 	display: flex;
 	justify-content: center;
@@ -104,10 +107,13 @@ body {
 	margin: 5px 10px 5px 2px;
 }
 
+a:hover {
+	background-color: #0B56A4;
+}
 
 @media (min-width: 680px) {
 	.thebody {
-			width: 90%;
+			width: 85%;
 			display: grid;
 			grid-template-columns: 1fr 1.5fr;
 			grid-template-rows: 0.5fr 0.1fr 1fr 1fr 0.2fr;

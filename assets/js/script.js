@@ -16,10 +16,25 @@ const foot = document.querySelector('.footer');
 foot.style.backgroundColor = '#0B56A4';
 foot.style.color = 'white';
 
+
 const linkcolor = document.querySelectorAll('a');
 	var i;
 	for (i = 0; i < linkcolor.length; i++) {
  		 linkcolor[i].style.color = "#F0FFFF";
-
- 
+ 		 // linkcolor[i].addEventListener('mouseover', hovermouse);
+ 		 // linkcolor[i].addEventListener('mouseout', hovermouseOut);
  		}
+
+ 	
+ 	// function hovermouseOut() {
+ 	// 	// linkcolor.style.color = '#F0FFFF'; 
+ 	// }
+
+// const mli = document.querySelector('.li') ;
+// mli.addEventListener('mouseover', hovermouse);
+// addEventListener('mouseout', hovermouseOut);
+
+// function hovermouse() {
+//  		mli.style.backgroundColor = '#0B56A4';
+//  	// alert('my happiness is buried');
+//  	}
